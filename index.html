@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="https://fav.farm/🔥" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Go Burger | O mais brabo da cozinha</title>
+		<link rel="stylesheet" href="./styles/output.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+			integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="font-sans">
+		<header class="w-full h-[420px] bg-home bg-center bg-no-repeat bg-cover">
+			<div
+				class="w-full h-full flex items-center justify-center flex-col space-y-4"
+			>
+				<div
+					class="relative flex items-center justify-center w-32 h-32 rounded-full"
+				>
+					<img
+						src="./assets/go-burguer-logo-v1.svg"
+						alt="Go Burger"
+						class="absolute w-24 h-24 z-10 bottom-6 hover:scale-110 transition-all"
+					/>
+					<div
+						class="bg-black absolute w-32 h-32 rounded-full bg-opacity-50 border border-zinc-100"
+					></div>
+					<img
+						src="./assets/hamb-1.png"
+						alt="hamburguer"
+						class="overflow-hidden w-32 h-32 rounded-full"
+					/>
+				</div>
+				<h1 class="text-4xl font-bold mt-4 mb-2 text-zinc-100">Go Burger</h1>
+				<span class="text-zinc-300 font-semibold">
+					Avenida Paulista, 1441 - São Paulo/SP
+				</span>
+				<div
+					class="bg-emerald-500 px-4 py-1 font-medium rounded-md text-zinc-100"
+					id="date-span"
+				>
+					<span>Seg à Dom - 18:00 ~ 01:00</span>
+				</div>
+			</div>
+		</header>
+
+		<h2 class="text-2xl md:text-4xl font-bold text-center my-8">
+			Conheça nossos hambúrgueres
+		</h2>
+
+		<div id="menu">
+			<main
+				class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mx-auto max-w-7xl mb-16"
+			>
+				<div
+					class="flex items-center gap-2 px-2 border py-1 rounded-md shadow-md border-transparent"
+				>
+					<img
+						src="./assets/hamb-1.png"
+						alt="Smash Go"
+						class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 transition-all"
+					/>
+					<div>
+						<h3 class="font-bold">Smash Go</h3>
+						<p class="text-xs md:text-sm line-clamp-4">
+							Pão de brioche macio, blend de 100g selado na chapa, queijo
+							cheddar derretido e nosso molho especial Go, perfeito para quem
+							busca sabor e praticidade.
+						</p>
+
+						<div class="flex items-center justify-between">
+							<span class="font-bold text-lg">R$ 29,90</span>
+							<button
+								class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+								data-name="Smash Go"
+								data-price="29.90"
+							>
+								<i class="fas fa-cart-plus size-4 -ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+				>
+					<img
+						src="./assets/hamb-2.png"
+						alt="Double Go"
+						class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 transition-all"
+					/>
+					<div>
+						<h3 class="font-bold">Double Go</h3>
+						<p class="text-xs md:text-sm line-clamp-4">
+							Dois suculentos blends de 100g cada, cobertos com queijo prato,
+							alface crocante e tomate fresquinho, tudo em um pão de brioche
+							artesanal, garantindo o dobro de sabor.
+						</p>
+
+						<div class="flex items-center justify-between">
+							<span class="font-bold text-lg">R$ 32,90</span>
+							<button
+								class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+								data-name="Smash Go"
+								data-price="29.90"
+							>
+								<i class="fas fa-cart-plus size-4 -ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+				>
+					<img
+						src="./assets/hamb-3.png"
+						alt="Double Cheese"
+						class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 transition-all"
+					/>
+					<div>
+						<h3 class="font-bold">Double Cheese</h3>
+						<p class="text-xs md:text-sm line-clamp-4">
+							Pão de brioche amanteigado, dois suculentos blends de carne de
+							100g cada, com uma dupla camada de queijo cheddar derretido,
+							acompanhado de cebolas caramelizadas e maionese especial.
+						</p>
+
+						<div class="flex items-center justify-between">
+							<span class="font-bold text-lg">R$ 33,90</span>
+							<button
+								class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+								data-name="Smash Go"
+								data-price="29.90"
+							>
+								<i class="fas fa-cart-plus size-4 -ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+				>
+					<img
+						src="./assets/hamb-4.png"
+						alt="Chicken Go"
+						class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 transition-all"
+					/>
+					<div>
+						<h3 class="font-bold">Chicken Go</h3>
+						<p class="text-xs md:text-sm line-clamp-4">
+							Peito de frango empanado crocante, queijo prato, alface americana
+							e maionese caseira, tudo em um pão brioche fresco, ideal para os
+							amantes de frango.
+						</p>
+
+						<div class="flex items-center justify-between">
+							<span class="font-bold text-lg">R$ 29,90</span>
+							<button
+								class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+								data-name="Smash Go"
+								data-price="29.90"
+							>
+								<i class="fas fa-cart-plus size-4 -ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+				>
+					<img
+						src="./assets/hamb-5.png"
+						alt="Go Monster"
+						class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 transition-all"
+					/>
+					<div>
+						<h3 class="font-bold">Go Monster</h3>
+						<p class="text-xs md:text-sm line-clamp-4">
+							Um verdadeiro monstro de sabor: três blends de carne de 100g, três
+							fatias de queijo cheddar, bacon crocante, cebolas crispy, picles e
+							molho especial, tudo dentro de um pão gigante de brioche.
+						</p>
+
+						<div class="flex items-center justify-between">
+							<span class="font-bold text-lg">R$ 38,90</span>
+							<button
+								class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+								data-name="Smash Go"
+								data-price="29.90"
+							>
+								<i class="fas fa-cart-plus size-4 -ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+				>
+					<img
+						src="./assets/hamb-6.png"
+						alt="Wombo Combo"
+						class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 transition-all"
+					/>
+					<div>
+						<h3 class="font-bold">Wombo Combo</h3>
+						<p class="text-xs md:text-sm line-clamp-4">
+							A combinação perfeita: um blend de carne de 120g com queijo suíço,
+							bacon defumado, anéis de cebola crocantes e barbecue artesanal,
+							servido no pão de brioche macio. Acompanha fritas.
+						</p>
+
+						<div class="flex items-center justify-between">
+							<span class="font-bold text-lg">R$ 42,90</span>
+							<button
+								class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+								data-name="Smash Go"
+								data-price="29.90"
+							>
+								<i class="fas fa-cart-plus size-4 -ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+				>
+					<img
+						src="./assets/hamb-7.png"
+						alt="Onion Smash Go"
+						class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 transition-all"
+					/>
+					<div>
+						<h3 class="font-bold">Onion Smash Go</h3>
+						<p class="text-xs md:text-sm line-clamp-4">
+							Blend de carne de 100g com queijo cheddar, anéis de cebola,
+							cebolas caramelizadas e cebolas crocantes, tudo isso no pão de
+							brioche com nossa maionese exclusiva, uma explosão de sabores.
+						</p>
+
+						<div class="flex items-center justify-between">
+							<span class="font-bold text-lg">R$ 29,90</span>
+							<button
+								class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+								data-name="Smash Go"
+								data-price="29.90"
+							>
+								<i class="fas fa-cart-plus size-4 -ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+				>
+					<img
+						src="./assets/hamb-8.png"
+						alt="Veggie Go"
+						class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 transition-all"
+					/>
+					<div>
+						<h3 class="font-bold">Veggie Go</h3>
+						<p class="text-xs md:text-sm line-clamp-4">
+							Hambúrguer vegetal grelhado, queijo prato, alface americana,
+							tomate, cebola roxa e molho pesto artesanal, tudo dentro de um pão
+							integral macio.
+						</p>
+
+						<div class="flex items-center justify-between">
+							<span class="font-bold text-lg">R$ 29,90</span>
+							<button
+								class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+								data-name="Smash Go"
+								data-price="29.90"
+							>
+								<i class="fas fa-cart-plus size-4 -ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<div class="mx-auto max-w-7xl">
+				<h2 class="text-2xl md:text-4xl font-bold text-center my-8">Bebidas</h2>
+
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mx-auto max-w-7xl mb-16"
+				>
+					<div
+						class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+					>
+						<img
+							src="./assets/refri-1.png"
+							alt="Coca-Cola Lt."
+							class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 transition-all"
+						/>
+						<div>
+							<h3 class="font-bold">Coca-Cola Lt.</h3>
+							<p class="text-xs md:text-sm line-clamp-4">
+								O clássico que não pode faltar! Coca-Cola geladinha para
+								acompanhar o seu hambúrguer favorito.
+							</p>
+
+							<div class="flex items-center justify-between">
+								<span class="font-bold text-lg">R$ 6,00</span>
+								<button
+									class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+									data-name="Smash Go"
+									data-price="29.90"
+								>
+									<i class="fas fa-cart-plus size-4 -ml-1"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+					>
+						<img
+							src="./assets/refri-2.png"
+							alt="Guaraná Antarctica Lt."
+							class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 transition-all"
+						/>
+						<div>
+							<h3 class="font-bold">Guaraná Antarctica Lt.</h3>
+							<p class="text-xs md:text-sm line-clamp-4">
+								Refrescante e único, o autêntico sabor brasileiro do Guaraná
+								Antarctica para harmonizar com a sua refeição.
+							</p>
+
+							<div class="flex items-center justify-between">
+								<span class="font-bold text-lg">R$ 6,00</span>
+								<button
+									class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+									data-name="Smash Go"
+									data-price="29.90"
+								>
+									<i class="fas fa-cart-plus size-4 -ml-1"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+					>
+						<img
+							src="./assets/suco-1.png"
+							alt="Suco Natural"
+							class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 transition-all"
+						/>
+						<div>
+							<h3 class="font-bold">Suco Natural</h3>
+							<p class="text-xs md:text-sm line-clamp-4">
+								Perfeito para uma pausa refrescante ou para acompanhar seu
+								hambúrguer com saúde e sabor.
+							</p>
+
+							<div class="flex items-center justify-between">
+								<span class="font-bold text-lg">R$ 8,00</span>
+								<button
+									class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+									data-name="Smash Go"
+									data-price="29.90"
+								>
+									<i class="fas fa-cart-plus size-4 -ml-1"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="flex gap-2 px-2 items-center border py-1 rounded-md shadow-md border-transparent"
+					>
+						<img
+							src="./assets/monster-1.png"
+							alt="Energético Monster"
+							class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 transition-all"
+						/>
+						<div>
+							<h3 class="font-bold">Energético Monster</h3>
+							<p class="text-xs md:text-sm line-clamp-4">
+								A dose de adrenalina que você precisa. Com sabor intenso e
+								fórmula energizante.
+							</p>
+
+							<div class="flex items-center justify-between">
+								<span class="font-bold text-lg">R$ 10,00</span>
+								<button
+									class="bg-zinc-900 hover:bg-zinc-700 transition-all text-zinc-100 px-3 py-1 rounded-md add-to-cart-btn"
+									data-name="Smash Go"
+									data-price="29.90"
+								>
+									<i class="fas fa-cart-plus size-4 -ml-1"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="bg-black bg-opacity-80 w-full h-full fixed inset-0 z-[99] hidden items-center justify-center"
+			>
+				<div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+					<h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+					<div
+						id="cart-items"
+						class="flex justify-between items-center flex-col mb-2"
+					></div>
+
+					<p class="font-bold">Total: <span id="cart-total">R$ 0,00</span></p>
+
+					<p class="font-bold mt-4">Endereço de entrega:</p>
+					<input
+						type="text"
+						placeholder="Ex: Rua dos Bobos, 0 - São Paulo/SP"
+						id="address"
+						class="w-full border p-1 rounded-md my-1 placeholder:italic"
+					/>
+					<p id="address-error" class="hidden text-red-500 text-sm">
+						Digite o endereço completo!
+					</p>
+
+					<div class="flex items-center gap-2 justify-end mt-8">
+						<button
+							id="close-modal-btn"
+							class="transition-all border py-1 px-2 rounded-md hover:bg-zinc-900 hover:text-zinc-100 font-medium"
+						>
+							Fechar
+						</button>
+						<button
+							id="checkout-btn"
+							class="transition-all text-white bg-emerald-500 hover:bg-emerald-600 py-1 px-2 rounded-md font-medium"
+						>
+							Finalizar pedido
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<footer
+				class="w-full bg-red-500 py-2 fixed bottom-0 z-50 flex items-center justify-center"
+			>
+				<button class="flex items-center text-white font-bold gap-2">
+					<span>&#40;<span id="" cart-count>2</span>&#41;</span> Ver carrinho
+					<i class="fas fa-cart-plus text-lg text-white"></i>
+				</button>
+			</footer>
+		</div>
+	</body>
+</html>
